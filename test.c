@@ -1,18 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 15:30:15 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/16 17:44:22 by fkrug            ###   ########.fr       */
+/*   Created: 2023/03/16 17:26:15 by fkrug             #+#    #+#             */
+/*   Updated: 2023/03/16 17:47:54 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include "libft.h"
+
+int	main(void)
 {
-	if (c >= 'A' && c <= 'z')
-		return (1);
-	return (0);
+	int	counter;
+	int	is;
+	int	should;
+
+	counter = 0;
+	is = 0;
+	should = 0;
+	while (counter < 300)
+	{
+		is = ft_isalpha(counter);
+		should = isalpha(counter);
+		if (is != should)
+		{
+			printf("Ft_isalpha: %d isalpha: %d\n", is, should);
+		}
+		counter++;
+	}
+	return (1);
 }
