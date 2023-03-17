@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 07:31:16 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 13:56:40 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/17 14:13:29 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/17 14:22:42 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	strlen(const char *s)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t	counter;
-
-	counter = 0;
-	while(s[counter])
-		counter++;
-	return (counter);
+	
 }

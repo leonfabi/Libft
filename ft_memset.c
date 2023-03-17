@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 07:31:16 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 13:56:40 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/17 12:53:20 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/17 13:56:31 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	strlen(const char *s)
+void	*memset(void *s, int c, size_t n)
 {
-	size_t	counter;
+	int	counter;
+	int	*pointer;
 
 	counter = 0;
-	while(s[counter])
+	pointer = s;
+	while((n - counter) > 0)
+	{
+		*(pointer + counter * 4) = c;
 		counter++;
-	return (counter);
+	}
+	return (s);
 }

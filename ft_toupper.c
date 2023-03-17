@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 07:31:16 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 13:56:40 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/17 15:59:03 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/17 16:04:35 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	strlen(const char *s)
+int	ft_toupper(int c)
 {
-	size_t	counter;
-
-	counter = 0;
-	while(s[counter])
-		counter++;
-	return (counter);
+	if(c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }

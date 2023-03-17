@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 07:31:16 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 13:56:40 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/17 14:06:02 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/17 14:12:36 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	strlen(const char *s)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	counter;
+	char	*destination;
+	char	*source;
 
-	counter = 0;
-	while(s[counter])
-		counter++;
-	return (counter);
+	destination = dest;
+	source = src;
+	while(n-- > 0)
+	{
+		*destination++ = *source;
+		source++;
+	}
+	return (dest);
 }

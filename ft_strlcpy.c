@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 07:31:16 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 13:56:40 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/17 14:23:52 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/17 15:56:19 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	strlen(const char *s)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	counter;
+	int	counter;
 
 	counter = 0;
-	while(s[counter])
+	while(size-- > 1)
+	{
+		dst[counter] = src[counter];
 		counter++;
-	return (counter);
+	}
+	dst[counter] = '\0';
 }

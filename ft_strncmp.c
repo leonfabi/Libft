@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 07:31:16 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 13:56:40 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/17 16:37:35 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/17 16:42:47 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	strlen(const char *s)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	counter;
+	char	*src1;
+	char	*src2;
 
-	counter = 0;
-	while(s[counter])
-		counter++;
-	return (counter);
+	src1 = s1;
+	src2 = s2;
+	while(n > 0 && (*src1 - *src2) == 0 && *src1)
+	{
+		n--;
+		src1++;
+		src2++;
+	}
+	return (*src1 - *src2);
 }

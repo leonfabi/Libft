@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 07:31:16 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 13:56:40 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/17 16:43:10 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/17 17:06:40 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	strlen(const char *s)
+void	*memchr(const void *s, int c, size_t n)
 {
-	size_t	counter;
+	unsigned char	*pointer;
 
-	counter = 0;
-	while(s[counter])
-		counter++;
-	return (counter);
+	pointer = s;
+	while(n > 0 && *pointer != c)
+	{
+		pointer++;
+		n--;
+	}
+	if(*pointer == c)
+		return (pointer);
+	return (NULL);
 }

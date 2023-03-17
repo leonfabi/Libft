@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 07:31:16 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 13:56:40 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/17 16:28:26 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/17 16:35:32 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-size_t	strlen(const char *s)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t	counter;
+	size_t	size;
+	char	*pointer;
 
-	counter = 0;
-	while(s[counter])
-		counter++;
-	return (counter);
+	size = ft_strlen(s);
+	pointer = s + size - 1;
+	while(*pointer != c && size > 0)
+	{
+		pointer--;
+		size--;
+	}
+	if(*pointer == c)
+		return (pointer);
+	return (NULL);
 }

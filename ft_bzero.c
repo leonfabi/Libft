@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 07:31:16 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 13:56:40 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/17 13:57:35 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/17 14:05:05 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	strlen(const char *s)
+void	bzero(void *s, size_t n)
 {
-	size_t	counter;
+	char	*pointer;
 
-	counter = 0;
-	while(s[counter])
-		counter++;
-	return (counter);
+	pointer = s;
+	while(n > 0)
+	{
+		*pointer++ = '\0';
+		n--;
+	}
 }
