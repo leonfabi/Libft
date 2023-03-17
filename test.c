@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
+/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:26:15 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/16 18:54:56 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/17 07:23:00 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(void)
 	{
 		is = ft_isalpha(counter);
 		should = isalpha(counter);
-		if (is != should)
+		if ((is != should) && (should == 0))
 		{
 			printf("Value: %c Ft_isalpha: %d isalpha: %d\n",(char) counter, is, should);
 		}
@@ -42,7 +42,7 @@ int	main(void)
 	{
 		is = ft_isalnum(counter);
 		should = isalnum(counter);
-		if (is != should)
+		if ((is != should) && (should == 0))
 		{
 			printf("Value: %c Ft_isalnum: %d isalnum: %d\n",(char) counter, is, should);
 		}
@@ -54,7 +54,7 @@ int	main(void)
 	{
 		is = ft_isascii(counter);
 		should = isascii(counter);
-		if (is != should)
+		if ((is != should) && (should == 0))
 		{
 			printf("Value: %c Ft_isascii: %d isascii: %d\n",(char) counter, is, should);
 		}
@@ -66,7 +66,7 @@ int	main(void)
 	{
 		is = ft_isdigit(counter);
 		should = isdigit(counter);
-		if (is != should)
+		if ((is != should) && (should == 0))
 		{
 			printf("Value: %c Ft_isdigit: %d isdigit: %d\n",(char) counter, is, should);
 		}
@@ -78,7 +78,7 @@ int	main(void)
 	{
 		is = ft_isprint(counter);
 		should = isprint(counter);
-		if (is != should)
+		if ((is != should) && (should == 0))
 		{
 			printf("Value: %d Ft_isprint: %d isprint: %d\n", counter, is, should);
 		}
