@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:26:15 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/17 07:23:00 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/17 12:51:11 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,7 @@ int	main(void)
 		}
 		counter++;
 	}
+	//STRINGS
+	print("STRLEN\n");
 	return (0);
 }
