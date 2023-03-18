@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:37:35 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 16:42:47 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/17 19:43:35 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*src1;
-	char	*src2;
+	const char	*src1;
+	const char	*src2;
 
 	src1 = s1;
 	src2 = s2;

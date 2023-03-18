@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 12:53:20 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 13:56:31 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/18 06:58:13 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 void	*memset(void *s, int c, size_t n)
 {
-	int	counter;
-	int	*pointer;
+	char	*pointer;
 
-	counter = 0;
 	pointer = s;
-	while((n - counter) > 0)
+	while(n)
 	{
-		*(pointer + counter * 4) = c;
-		counter++;
+		//*(pointer + n - 1) = c;
+		*pointer++ = c;
+		n--;
 	}
 	return (s);
 }

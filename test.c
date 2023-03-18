@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:26:15 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/17 12:51:11 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/18 06:38:19 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include "libft.h"
+#include <string.h>
 
 int	main(void)
 {
@@ -85,6 +86,21 @@ int	main(void)
 		counter++;
 	}
 	//STRINGS
-	print("STRLEN\n");
+	printf("STRLEN\n");
+	char	string[] = "123456";
+	printf("ft_strlen: %ld\n", ft_strlen(string));
+	printf("strlen: %ld\n", strlen(string));
+	//MEMSET
+	printf("MEMSET\n");
+	char	string1[] = "Hallo dies ist ein Test";
+	int		array[] = {1,2,3,4,5,6};
+	printf("String: %s\n", string1);
+	memset(string1, 'X', 3 * sizeof(char));
+	printf("Memset: %s\n", string1);
+	for (int i=0; i<6; i++)
+		printf("Array: %d\n ", array[i]);
+	memset(array, 1, 2 * sizeof(array[0]));
+	for (int i=0; i<6; i++)
+		printf("Memset: %d\n ", array[i]);
 	return (0);
 }

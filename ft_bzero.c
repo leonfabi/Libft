@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 13:57:35 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 14:05:05 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/18 06:57:47 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	bzero(void *s, size_t n)
 	char	*pointer;
 
 	pointer = s;
-	while(n > 0)
+	while(n)
 	{
 		*pointer++ = '\0';
 		n--;

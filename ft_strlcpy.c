@@ -6,11 +6,12 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:23:52 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 15:56:19 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/17 19:45:40 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -23,4 +24,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		counter++;
 	}
 	dst[counter] = '\0';
+	return (ft_strlen(src));
 }

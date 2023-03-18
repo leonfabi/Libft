@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:07:52 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 16:27:48 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/17 19:47:03 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*pointer;
-	int		counter;
+	const char	*pointer;
 
 	pointer = s;
 
 	while(*pointer && *pointer != c)
 		pointer++;
 	if(*pointer == c)
-		return (pointer);
+		return ((char*) pointer);
 	return (NULL);
 }
