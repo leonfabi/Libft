@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:26:15 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/18 06:38:19 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/20 14:21:16 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,5 +102,6 @@ int	main(void)
 	memset(array, 1, 2 * sizeof(array[0]));
 	for (int i=0; i<6; i++)
 		printf("Memset: %d\n ", array[i]);
+	printf("BZERO");
 	return (0);
 }
