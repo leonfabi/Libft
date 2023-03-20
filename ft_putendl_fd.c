@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 13:57:35 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/20 11:54:09 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/20 11:44:57 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/20 11:47:15 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*pointer;
-
-	pointer = s;
-	while(n)
-	{
-		*pointer++ = '\0';
-		n--;
-	}
+	ft_putstr_fd(fd, s);
+	write(fd, '\n', 1);
 }

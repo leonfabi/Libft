@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 13:57:35 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/20 11:54:09 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/20 11:47:39 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/20 11:50:25 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*pointer;
+	char	*str;
 
-	pointer = s;
-	while(n)
-	{
-		*pointer++ = '\0';
-		n--;
-	}
+	str = ft_itoa(n);
+	ft_putstr(fd, str);
 }

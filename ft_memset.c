@@ -6,13 +6,13 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 12:53:20 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/18 06:58:13 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/19 16:04:58 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	char	*pointer;
 

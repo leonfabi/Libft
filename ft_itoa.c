@@ -1,25 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 13:57:35 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/20 11:54:09 by singerporsc      ###   ########.fr       */
+/*   Created: 2023/03/20 08:43:26 by singerporsc       #+#    #+#             */
+/*   Updated: 2023/03/20 08:57:31 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_itoa(int n)
 {
-	char	*pointer;
+	int		length;
+	int		calc;
+	int		sign;
+	char	*str;
 
-	pointer = s;
-	while(n)
+	calc = n;
+	length = 0;
+	sign = 0;
+	if (calc < 0)
+		sign = 1;
+	while (calc)
 	{
-		*pointer++ = '\0';
-		n--;
+		length++;
+		calc /= 10;
 	}
+	str = (char*) malloc(length + 1 + sign);
+	if(str == NULL)
+		return (NULL);
+	str[length + sign] = '\0';
+	if(sign)
+		str[0] = '-';
+	calc = n;
+	while((length + sign) >= sign)
+	{
+		str[length + sign] = calc % 10;
+		calc /= 10;
+		length--;
+	}
+	return (str);
 }
