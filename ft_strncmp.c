@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:37:35 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 19:43:35 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/22 10:50:01 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,16 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	src1 = s1;
 	src2 = s2;
-	while(n > 0 && (*src1 - *src2) == 0 && *src1)
+	if ( n == 0)
+		return (0);
+	else
 	{
-		n--;
-		src1++;
-		src2++;
+		while(n > 1 && (*src1 - *src2) == 0 && *src1)
+		{
+			n--;
+			src1++;
+			src2++;
+		}
+		return (*src1 - *src2);
 	}
-	return (*src1 - *src2);
 }
