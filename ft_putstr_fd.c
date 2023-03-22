@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 11:43:11 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/20 11:45:41 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/20 16:45:00 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while(s)
+	while(*s)
 	{
-		write(fd, &s, 1);
+		write(fd, s, 1);
 		s++;
 	}
 }
