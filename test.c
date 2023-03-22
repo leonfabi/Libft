@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:26:15 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/22 18:00:15 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/22 18:31:02 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -274,7 +274,7 @@ int	main(void)
 	//memchr
 	printf("___memchr\n");
 	char	mem_chr[] = "AA12ABC";
-	char	mchr = 'B';
+	char	mchr = 'C';
 	char	*mem_ft;
 	char	*mem;
 	mem_ft = ft_memchr(mem_chr, mchr, 6);
@@ -310,5 +310,13 @@ int	main(void)
 		printf("c: %d | %s | %s | ft_strnstr: %s\n", counter, big, little, search_ft);
 		counter++;
 	}
+	//atoi
+	printf("___atoi\n");
+	int		integer;
+	int		integer_ft;
+	char	number[] = "-2147483648";
+	integer_ft = ft_atoi(number);
+	integer = atoi(number);
+	printf("string: %s | ft: %d | std: %d\n", number, integer_ft, integer);
 	return (0);
 }
