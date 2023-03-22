@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:26:15 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/22 12:59:36 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/22 18:00:15 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,7 +176,7 @@ int	main(void)
 		std = strncmp(string_strncmp1, string_strncmp2, counter);
 		if (ft != std)
 		{
-			printf("counter: %d | %s | %s | ft_strncmp: %d | strncmp: %d\n", counter, string_strncmp1, string_strncmp2, ft, std);
+			printf("c: %d | %s | %s | ft_strncmp: %d | strncmp: %d\n", counter, string_strncmp1, string_strncmp2, ft, std);
 		}
 		counter++;
 	}
@@ -195,7 +195,7 @@ int	main(void)
 		ft_sl = ft_strlcpy(str_ft_dst, str_strlcpy, counter);
 		str_dst = strncpy(str_dst, str_strlcpy, counter);
 		if (1)//strncmp(str_dst, str_ft_dst, strlen(str_dst)) != 0)
-			printf("counter: %d | strlcpy: %s | ft_strlcpy: %s | ouput_ft: %d\n", counter, str_dst, str_ft_dst, ft_sl);
+			printf("c: %d | strlcpy: %s | ft_strlcpy: %s | ouput_ft: %d\n", counter, str_dst, str_ft_dst, ft_sl);
 		counter++;
 	}
 	printf("___strlcat\n");
@@ -216,7 +216,7 @@ int	main(void)
 		ft_sl = ft_strlcat(dst_ft_c, str_c, counter);
 		dst_c = strncat(dst_c, str_c, counter);
 		if (1)//strncmp(str_dst, str_ft_dst, strlen(str_dst)) != 0)
-			printf("counter: %d | strncat: %s | ft_strlcat: %s | ouput_ft: %d\n", counter, dst_c, dst_ft_c, ft_sl);
+			printf("c: %d | strncat: %s | ft_strlcat: %s | ouput_ft: %d\n", counter, dst_c, dst_ft_c, ft_sl);
 		counter++;
 	}
 	//toupper
@@ -229,7 +229,7 @@ int	main(void)
 		ft_up = ft_toupper(counter);
 		up = toupper(counter);
 		if(up != ft_up)
-			printf("counter: %d | toupper: %c | ft_toupper: %c", counter, up, ft_up);
+			printf("c: %d | toupper: %c | ft_toupper: %c", counter, up, ft_up);
 		counter++;
 	}
 	//tolower
@@ -242,7 +242,7 @@ int	main(void)
 		ft_dn = ft_tolower(counter);
 		dn = tolower(counter);
 		if(dn != ft_dn)
-			printf("counter: %d | tolower: %c | ft_tolower: %c", counter, dn, ft_dn);
+			printf("c: %d | tolower: %c | ft_tolower: %c", counter, dn, ft_dn);
 		counter++;
 	}
 	//strchr
@@ -271,5 +271,44 @@ int	main(void)
 	ptrr--;
 	ptr_rft--;
 	printf("ft: %c | std: %c\n", *ptr_rft, *ptrr);
+	//memchr
+	printf("___memchr\n");
+	char	mem_chr[] = "AA12ABC";
+	char	mchr = 'B';
+	char	*mem_ft;
+	char	*mem;
+	mem_ft = ft_memchr(mem_chr, mchr, 6);
+	mem = memchr(mem_chr, mchr, 6);
+	if (mem_ft && mem)
+		printf("ft: %c | std: %c\n", *mem_ft, *mem);
+	//memcmp
+	printf("___memcmp\n");
+	char	mem_1[] = "xxxxA";
+	char	mem_2[] = "xxxA";
+	int		ft_mem = ft_memcmp(mem_1, mem_2, 2);
+	int		std_mem = memcmp(mem_1, mem_2, 2);
+	counter = -1;
+	while (counter < (int)(strlen(mem_1)) + 1)
+	{
+		ft_mem = ft_memcmp(mem_1, mem_2, counter);
+		std_mem = memcmp(mem_1, mem_2, counter);
+		if (1)//ft_mem != std_mem)
+		{
+			printf("c: %d | %s | %s | ft_memcmp: %d | memcmp: %d\n", counter, mem_1, mem_2, ft_mem, std_mem);
+		}
+		counter++;
+	}
+	//strnstr
+	printf("___strnstr\n");
+	char	big[] = "1235";//"1234\0 5";
+	char	little[] = "1235";
+	char	*search_ft;
+	counter = -1;
+	while(counter < (int) strlen(big) + 1)
+	{
+		search_ft = ft_strnstr(big, little, counter);
+		printf("c: %d | %s | %s | ft_strnstr: %s\n", counter, big, little, search_ft);
+		counter++;
+	}
 	return (0);
 }

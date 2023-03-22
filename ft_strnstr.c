@@ -6,21 +6,21 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 11:56:30 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/20 12:49:07 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/22 17:59:11 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*strnstr(const char *s1, const char *s2, size_t len)
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
 	size_t		index1;
 	size_t		index2;
 
 	index1 = 0;
 	index2 = 0;
-	while(index1 < len)
+	while(index1 < len && s1[index1 + index2])
 	{
 		while(s1[index1 + index2] == s2[index2] && (index1 + index2) < len)
 			index2++;
