@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:26:15 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/22 18:31:02 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/23 18:23:01 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -318,5 +318,6 @@ int	main(void)
 	integer_ft = ft_atoi(number);
 	integer = atoi(number);
 	printf("string: %s | ft: %d | std: %d\n", number, integer_ft, integer);
+	//ftsubstr
 	return (0);
 }
