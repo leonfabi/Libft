@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 12:53:20 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/24 14:16:18 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/24 18:26:15 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	pointer = s;
 	while (n)
 	{
-		//*(pointer + n - 1) = c;
 		*pointer++ = c;
 		n--;
 	}
