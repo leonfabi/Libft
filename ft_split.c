@@ -6,13 +6,13 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 11:20:49 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/24 13:15:56 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/24 14:24:12 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		sections(char const *s, char c)
+int	sections(char const *s, char c)
 {
 	int	start;
 	int	end;
@@ -47,5 +47,5 @@ char	**ft_split(char const *s, char c)
 
 	len = sections(s, c);
 	array = (char **)calloc(len + 1, sizeof(char *));
-	
+	return (array);
 }

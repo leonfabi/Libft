@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
+/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 14:04:16 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/23 15:56:05 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 14:21:01 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*start;
 
-	start = (t_list*)malloc(sizeof(t_list));
+	start = (t_list *)malloc(sizeof(t_list));
 	if (start == NULL)
 		return (NULL);
 	start->content = content;
