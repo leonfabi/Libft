@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:37:35 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/24 14:09:52 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/24 18:25:23 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			src1++;
 			src2++;
 		}
-		return (*src1 - *src2);
+		return ((unsigned char)*src1 - (unsigned char)*src2);
 	}
 }
