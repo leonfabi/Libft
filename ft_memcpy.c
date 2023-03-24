@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:06:02 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/24 16:07:06 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/24 16:40:30 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	destination = dest;
 	source = src;
-	if(!dest && !src)
+	if (!dest && !src)
 		return (NULL);
-	while (n-- > 0)
+	while (n--)
 		*destination++ = *source++;
 	return (dest);
 }

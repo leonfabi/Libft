@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:13:29 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/24 16:05:49 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/24 16:15:56 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		destination += n;
 		source += n;
-		while(n--)
+		while (n--)
 			*--destination = *--source;
 	}
 	return (dest);
