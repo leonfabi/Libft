@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:07:52 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/24 14:14:41 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/24 18:02:47 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,13 @@ char	*ft_strchr(const char *s, int c)
 	const char	*pointer;
 
 	pointer = s;
-	while (*pointer && *pointer != c)
+	while (*pointer)
+	{
+		if (*pointer == (char)c)
+			return ((char *)pointer);
 		pointer++;
-	if (*pointer == c)
-		return ((char *) pointer);
+	}
+	if (*pointer == (char)c)
+		return ((char *)pointer);
 	return (NULL);
 }
