@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:06:02 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 19:47:54 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 07:57:38 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		*destination++ = *source;
 		source++;
 	}
-	return (dest);
+	return (destination);
 }

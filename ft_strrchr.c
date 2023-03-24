@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:28:26 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 19:42:22 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 08:59:17 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	const char	*pointer;
 
 	size = ft_strlen(s);
-	pointer = s + size - 1;
+	pointer = s + size - 1;//size - 1 in eckigen ?
 	while(*pointer != c && size > 0)
 	{
 		pointer--;

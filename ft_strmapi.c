@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 10:42:03 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/23 17:52:08 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 08:18:08 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	length = ft_strlen(s);
 	str = (char*) malloc(length + 1);
+	if (str == NULL)
+		return (NULL);
 	iterate = 0;
 	while (s[iterate])
 	{
