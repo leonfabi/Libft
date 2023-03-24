@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:13:29 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/24 14:18:20 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/24 16:05:49 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	destination = dest;
 	source = src;
-	while (n > 0)
+	if (destination == source)
+		return (destination);
+	else if (destination < source)
+		while (n--)
+			*destination++ = *source++;
+	else
 	{
-		*destination = *source;
-		destination++;
-		source++;
-		n--;
+		destination += n;
+		source += n;
+		while(n--)
+			*--destination = *--source;
 	}
-	return (destination);
+	return (dest);
 }
