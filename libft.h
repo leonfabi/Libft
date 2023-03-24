@@ -1,4 +1,19 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/24 09:26:32 by fkrug             #+#    #+#             */
+/*   Updated: 2023/03/24 13:56:05 by fkrug            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <stdlib.h>
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -32,8 +47,5 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-typedef struct s_list
-{
-void *content;
-struct s_list *next;
-} t_list;
+
+#endif

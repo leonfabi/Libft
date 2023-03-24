@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
+/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 13:57:35 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/20 11:54:09 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 09:19:58 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_bzero(void *s, size_t n)
 	char	*pointer;
 
 	pointer = s;
-	while(n)
+	while (n)
 	{
 		*pointer++ = '\0';
 		n--;

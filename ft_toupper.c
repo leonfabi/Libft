@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
+/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 15:59:03 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 16:04:35 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 09:27:15 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
 {
-	if(c >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		c -= 32;
 	return (c);
 }
