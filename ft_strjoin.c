@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
+/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 16:47:49 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/24 14:13:53 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/27 20:17:48 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	while (index < s1_len + s2_len) //s2[index]
 	{
-		str[index] = s2[index];
+		str[index] = s2[index - s1_len];
 		index++;
 	}
 	str[index] = '\0';
