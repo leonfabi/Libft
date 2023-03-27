@@ -6,7 +6,7 @@
 /*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 16:47:49 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/27 20:17:48 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/27 20:18:53 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str = (char *) malloc(s1_len + s2_len + 1);
 	if (str == NULL)
 		return (NULL);
-	while (index < s1_len) //s1[index]
+	while (index < s1_len)
 	{
 		str[index] = s1[index];
 		index++;
 	}
-	while (index < s1_len + s2_len) //s2[index]
+	while (index < s1_len + s2_len)
 	{
 		str[index] = s2[index - s1_len];
 		index++;
