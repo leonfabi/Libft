@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
+/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 08:43:26 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/20 08:57:31 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 14:22:33 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ char	*ft_itoa(int n)
 		length++;
 		calc /= 10;
 	}
-	str = (char*) malloc(length + 1 + sign);
-	if(str == NULL)
+	str = (char *) malloc(length + 1 + sign);
+	if (str == NULL)
 		return (NULL);
 	str[length + sign] = '\0';
-	if(sign)
+	if (sign)
 		str[0] = '-';
 	calc = n;
-	while((length + sign) >= sign)
+	while ((length + sign) >= sign)
 	{
 		str[length + sign] = calc % 10;
 		calc /= 10;

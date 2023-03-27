@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
+/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:13:29 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/17 19:57:07 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 16:15:56 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*destination;
+	char		*destination;
 	char const	*source;
 
 	destination = dest;
 	source = src;
-	while(n > 0)
+	if (destination == source)
+		return (destination);
+	else if (destination < source)
+		while (n--)
+			*destination++ = *source++;
+	else
 	{
-		*destination = *source;
-		destination++;
-		source++;
-		n--;
+		destination += n;
+		source += n;
+		while (n--)
+			*--destination = *--source;
 	}
-	return (destination);
+	return (dest);
 }

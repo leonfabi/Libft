@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
+/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 17:07:09 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/22 17:40:23 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 18:48:17 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	src1 = s1;
 	src2 = s2;
-	if (n==0)
+	if (n == 0)
 		return (0);
 	else
 	{
-		while(n > 0 && (*src1 - *src2) == 0)
+		while (n > 1 && (*src1 - *src2) == 0)
 		{
 			n--;
 			src1++;
 			src2++;
 		}
-		return (*src1 - *src2);
+		return ((unsigned char)*src1 - (unsigned char)*src2);
 	}
 }

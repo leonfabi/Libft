@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
+/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 16:08:45 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/23 16:32:18 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 14:20:39 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_lstsize(t_list *lst)
 
 	size = 0;
 	counter = lst;
-	while(counter)
+	while (counter)
 	{
 		size++;
 		counter = counter->next;

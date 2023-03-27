@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
+/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:06:02 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/24 07:57:38 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 16:40:30 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,14 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char	*destination;
+	char		*destination;
 	const char	*source;
 
 	destination = dest;
 	source = src;
-	while(n-- > 0)
-	{
-		*destination++ = *source;
-		source++;
-	}
-	return (destination);
+	if (!dest && !src)
+		return (NULL);
+	while (n--)
+		*destination++ = *source++;
+	return (dest);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
+/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:37:35 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/22 10:50:01 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/24 18:25:23 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 	src1 = s1;
 	src2 = s2;
-	if ( n == 0)
+	if (n == 0)
 		return (0);
 	else
 	{
-		while(n > 1 && (*src1 - *src2) == 0 && *src1)
+		while (n > 1 && (*src1 - *src2) == 0 && *src1)
 		{
 			n--;
 			src1++;
 			src2++;
 		}
-		return (*src1 - *src2);
+		return ((unsigned char)*src1 - (unsigned char)*src2);
 	}
 }
