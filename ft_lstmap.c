@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 15:47:38 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 15:48:17 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 16:42:54 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
+	if(!lst | !f | !del)
+		return (NULL);
 	
 }

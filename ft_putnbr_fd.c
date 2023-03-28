@@ -6,13 +6,12 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 11:47:39 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 16:36:25 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 16:54:05 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
-
 
 int	ft_l(int n)
 {
@@ -31,15 +30,14 @@ int	ft_l(int n)
 	return (count);
 }
 
-//END
 void	ft_putnbr_fd(int n, int fd)
 {
-	int		length;
-	char	str[12];
-	size_t	nbr;
+	int				length;
+	char			str[12];
+	unsigned int	nbr;
 
 	nbr = n;
-	ft_bzero(str,12);
+	ft_bzero(str, 12);
 	length = ft_l(n);
 	if (n == 0)
 		str[0] = '0';
@@ -56,8 +54,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_putstr_fd(str, fd);
 }
-/*int	main(void)
-{
-	ft_putnbr_fd(2,1);
-	return (0);
-}*/

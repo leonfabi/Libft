@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 08:43:26 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 16:34:50 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 16:52:08 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int	ft_length(int n)
 
 char	*ft_itoa(int n)
 {
-	int		length;
-	char	*str;
-	size_t	nbr;
+	int				length;
+	char			*str;
+	unsigned int	nbr;
 
 	nbr = n;
 	length = ft_length(n);
