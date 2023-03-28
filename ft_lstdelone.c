@@ -5,13 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/23 17:34:25 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/24 14:21:49 by fkrug            ###   ########.fr       */
+/*   Created: 2023/03/28 14:45:33 by fkrug             #+#    #+#             */
+/*   Updated: 2023/03/28 14:48:54 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lbft.h"
+#include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!del)
+		return;
+	if (lst)
+	{
+		(*del)(lst->content);
+		free(lst);
+	}
 }
