@@ -6,7 +6,7 @@
 #    By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/14 16:35:57 by fkrug             #+#    #+#              #
-#    Updated: 2023/03/28 17:17:04 by fkrug            ###   ########.fr        #
+#    Updated: 2023/03/28 18:04:17 by fkrug            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,10 +28,8 @@ SRC_BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstdelone.c ft_lstlast.c		\
 			ft_lstnew.c ft_lstsize.c ft_lstclear.c ft_lstiter.c
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
-all: $(NAME) bonus
+all: $(NAME)
 $(NAME): $(SRC) $(OBJ)
-#	gcc -o $(NAME) $(SRC)
-#	cc -Wall -Werror -Wextra -c $(SRC) -o $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 bonus: $(SRC_BONUS) $(OBJ_BONUS)
