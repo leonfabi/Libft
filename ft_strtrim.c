@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
+/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 09:59:54 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/24 14:25:51 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 10:06:33 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	isset(char c, char const *set)
 	int	subset;
 
 	subset = 0;
-	while (set)
+	while (*set)
 	{
 		if (c == *set)
 			subset = 1;
@@ -31,19 +31,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 	char	*trim;
+	int		count;
 
 	start = 0;
 	end = 0;
+	count = 0;
 	while (isset(s1[start], set))
 		start++;
-	if (!s1[start])
-		return (NULL);
-	end = start;
-	while (!isset(s1[end], set) && s1[end])
-		end++;
-	if (!s1[end])
+	end = ft_strlen(s1) - 1;
+	while (isset(s1[end], set) && end >= start)
 		end--;
 	trim = (char *)malloc(end - start + 2);
-	ft_strlcpy(trim, &set[start], end - start + 1);
+	if (trim == NULL)
+		return (NULL);
+	while (start <= end)
+	{
+		trim[count] = s1[start];
+		count++;
+		start++;
+	}
+	trim[count] = '\0';
 	return (trim);
 }

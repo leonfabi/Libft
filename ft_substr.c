@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
+/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 16:07:32 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/24 09:29:10 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/27 20:15:07 by singerporsc      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-//Count from zero?
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -22,14 +21,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	index = 0;
 	str = s;
-	substr = (char *)malloc(len - start + 1);
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
+	if (start > ft_strlen(s))
+		start = ft_strlen(s);
+	substr = (char *)malloc(len + 1);
 	if (substr == NULL)
 		return (NULL);
-	while (len - start + 1)
+	while (s[start] && index < len)
 	{
 		substr[index] = str[start];
 		start++;
 		index++;
 	}
+	substr[index] = '\0';
 	return (substr);
 }
