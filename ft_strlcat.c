@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 15:56:51 by singerporsc       #+#    #+#             */
-/*   Updated: 2023/03/24 17:53:18 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 13:40:15 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	c_s = 0;
 	if (size > 0 && size > dst_l + 1)
 	{
-		while(src[c_s] && c_d + 2 < size)
+		while(src[c_s] && dst_l + c_s + 1 < size)
 		{
 			dst[c_d] = src[c_s];
 			c_d++;
@@ -32,7 +32,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		}
 		dst[c_d] = '\0';
 	}
-	if (size < dst_l)
+	if (size <= dst_l)
 		dst_l = size;
 	return (ft_strlen(src) + dst_l);
 }
