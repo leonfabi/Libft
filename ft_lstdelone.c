@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 14:45:33 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 14:48:54 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 16:01:40 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!del)
-		return;
+		return ;
 	if (lst)
 	{
 		(*del)(lst->content);

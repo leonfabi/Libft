@@ -6,14 +6,11 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 11:20:49 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 12:48:49 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 16:00:30 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
 
 int	ft_sections(char const *s, char c)
 {
@@ -42,6 +39,7 @@ int	ft_sections(char const *s, char c)
 	}
 	return (len);
 }
+
 int	ft_sect_start(char const *s, char c, int old_end)
 {
 	int	start;
@@ -51,6 +49,7 @@ int	ft_sect_start(char const *s, char c, int old_end)
 		start++;
 	return (start);
 }
+
 int	ft_sect_end(char const *s, char c, int old_start)
 {
 	int	end;
@@ -61,6 +60,7 @@ int	ft_sect_end(char const *s, char c, int old_start)
 	end--;
 	return (end);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	int		len;
@@ -74,23 +74,16 @@ char	**ft_split(char const *s, char c)
 	count = 0;
 	len = ft_sections(s, c);
 	array = (char **)ft_calloc(len + 1, sizeof(char *));
+	if (array == NULL)
+		return (NULL);
 	while (count < len)
 	{
 		start = ft_sect_start(s, c, end);
 		end = ft_sect_end(s, c, start);
-		//printf("Abschnitte: %d\n Start: %d\n End: %d\n",count,start,end);
-		array[count] = (char *)ft_calloc(start - end + 2, sizeof(char));
-		ft_memmove(array[count], &s[start], start - end + 1);
+		array[count] = ft_substr(s, start, end - start + 1);
+		if (!array[count])
+			return (NULL);
 		count++;
 	}
 	return (array);
 }
-/*int	main(void)
-{
-	char	str[] = "01z34z6z89";
-	char	c = 'z';
-	char	**test;
-	test = ft_split(str,c);
-	printf("Substring: %s",test[0]);
-	return (0);
-}*/

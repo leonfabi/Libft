@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/23 16:33:53 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 16:02:30 by fkrug            ###   ########.fr       */
+/*   Created: 2023/03/28 15:47:38 by fkrug             #+#    #+#             */
+/*   Updated: 2023/03/28 15:48:17 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*counter;
-
-	counter = lst;
-	if (counter == NULL)
-		return (NULL);
-	while (counter->next)
-		counter = counter->next;
-	return (counter);
+	
 }
