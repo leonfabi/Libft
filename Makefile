@@ -6,7 +6,7 @@
 #    By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/14 16:35:57 by fkrug             #+#    #+#              #
-#    Updated: 2023/03/28 18:04:17 by fkrug            ###   ########.fr        #
+#    Updated: 2023/03/28 18:22:19 by fkrug            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c	\
 OBJ = $(SRC:.c=.o)
 
 SRC_BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstdelone.c ft_lstlast.c		\
-			ft_lstnew.c ft_lstsize.c ft_lstclear.c ft_lstiter.c
+			ft_lstnew.c ft_lstsize.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 all: $(NAME)
