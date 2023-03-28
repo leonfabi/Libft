@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 11:20:49 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 17:24:11 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 18:01:50 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,16 @@ static int	ft_sect_end(char const *s, char c, int old_start)
 	return (end);
 }
 
+static void	ft_free(char **arr, int c)
+{
+	while (c > 1)
+	{
+		free(arr[c - 2]);
+		c--;
+	}
+	free(arr);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		len;
@@ -81,9 +91,11 @@ char	**ft_split(char const *s, char c)
 		start = ft_sect_start(s, c, end);
 		end = ft_sect_end(s, c, start);
 		array[count] = ft_substr(s, start, end - start + 1);
-		if (!array[count])
+		if (!array[count++])
+		{
+			ft_free(array, count);
 			return (NULL);
-		count++;
+		}
 	}
 	return (array);
 }
