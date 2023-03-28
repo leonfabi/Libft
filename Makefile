@@ -6,7 +6,7 @@
 #    By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/14 16:35:57 by fkrug             #+#    #+#              #
-#    Updated: 2023/03/24 14:27:20 by fkrug            ###   ########.fr        #
+#    Updated: 2023/03/28 14:14:43 by fkrug            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,19 +24,20 @@ SRC =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c	\
 		ft_tolower.c ft_toupper.c
 OBJ = $(SRC:.c=.o)
 
-SRC_BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstdelone.c ft_lstlast.c		\
+SRC_BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstlast.c		\
 			ft_lstnew.c ft_lstsize.c
+#ft_lstdelone.c
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
-#all: $(NAME) bonus
-all: $(NAME)
+all: $(NAME) bonus
+#all: $(NAME)
 $(NAME): $(SRC) $(OBJ)
 #	gcc -o $(NAME) $(SRC)
 #	cc -Wall -Werror -Wextra -c $(SRC) -o $(OBJ)
 	ar rcs libft.a $(OBJ)
 
-#bonus: $(SRC_BONUS) $(OBJ_BONUS)
-#	ar rcs libft.a $(OBJ_BONUS)
+bonus: $(SRC_BONUS) $(OBJ_BONUS)
+	ar rcs libft.a $(OBJ_BONUS)
 
 clean:
 	/bin/rm -f $(OBJ)

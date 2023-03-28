@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 09:26:32 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 12:47:35 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 14:12:53 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,11 @@ typedef struct s_list{
 	void *content;
 	struct s_list *next;
 }	t_list;
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstnew(void *content);
+int	ft_lstsize(t_list *lst);
 
 #endif
