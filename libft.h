@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: singerporsche <singerporsche@student.42    +#+  +:+       +#+        */
+/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 09:26:32 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/27 20:20:31 by singerporsc      ###   ########.fr       */
+/*   Updated: 2023/03/28 12:47:35 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,10 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+char	**ft_split(char const *s, char c);
 typedef struct s_list{
-void *content;
-struct s_list *next;
-} t_list;
+	void *content;
+	struct s_list *next;
+}	t_list;
 
 #endif
