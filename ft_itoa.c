@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 08:43:26 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 16:52:08 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 17:23:22 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_length(int n)
+static int	ft_length(int n)
 {
 	int	count;
 

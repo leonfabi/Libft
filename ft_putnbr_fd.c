@@ -6,14 +6,14 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 11:47:39 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 16:54:05 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 17:23:54 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-int	ft_l(int n)
+static int	ft_l(int n)
 {
 	int	count;
 

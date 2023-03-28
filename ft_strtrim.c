@@ -6,13 +6,13 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 09:59:54 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 16:37:55 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 17:25:07 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isset(char c, char const *set)
+static int	isset(char c, char const *set)
 {
 	int	subset;
 

@@ -6,13 +6,13 @@
 /*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 11:20:49 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/28 16:00:30 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/03/28 17:24:11 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_sections(char const *s, char c)
+static int	ft_sections(char const *s, char c)
 {
 	int	start;
 	int	end;
@@ -40,7 +40,7 @@ int	ft_sections(char const *s, char c)
 	return (len);
 }
 
-int	ft_sect_start(char const *s, char c, int old_end)
+static int	ft_sect_start(char const *s, char c, int old_end)
 {
 	int	start;
 
@@ -50,7 +50,7 @@ int	ft_sect_start(char const *s, char c, int old_end)
 	return (start);
 }
 
-int	ft_sect_end(char const *s, char c, int old_start)
+static int	ft_sect_end(char const *s, char c, int old_start)
 {
 	int	end;
 
