@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkrug <fkrug@student.42.fr>                +#+  +:+       +#+        */
+/*   By: fkrug <fkrug@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 17:26:15 by fkrug             #+#    #+#             */
-/*   Updated: 2023/03/24 09:26:03 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/05/10 15:41:27 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -319,5 +319,6 @@ int	main(void)
 	integer = atoi(number);
 	printf("string: %s | ft: %d | std: %d\n", number, integer_ft, integer);
 	//ftsubstr
+	ft_printf("Test%s", " ob das auch funktioniert \n");
 	return (0);
 }
