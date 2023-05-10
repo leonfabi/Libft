@@ -6,7 +6,7 @@
 /*   By: fkrug <fkrug@student.42heilbronn.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 09:26:32 by fkrug             #+#    #+#             */
-/*   Updated: 2023/04/24 20:45:48 by fkrug            ###   ########.fr       */
+/*   Updated: 2023/05/10 16:01:11 by fkrug            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include "ft_printf.h"
+# include "get_next_line.h"
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
